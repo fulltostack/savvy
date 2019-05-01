@@ -1,0 +1,47 @@
+{
+   "name": "savvy",
+   "version": "0.0.1",
+   "description": "Savvy Test Project",
+   "devDependencies": {
+      "@types/node": "^8.10.46",
+      "@types/winston": "^2.4.4",
+      "chai": "^4.2.0",
+      "chai-http": "^4.3.0",
+      "mocha": "^6.1.4",
+      "nodemon": "^1.18.11",
+      "ts-mocha": "^6.0.0",
+      "ts-node": "3.3.0",
+      "typescript": "2.5.2",
+      "tslint": "^5.16.0"
+   },
+   "dependencies": {
+      "@babel/cli": "^7.2.3",
+      "@babel/core": "^7.3.4",
+      "@babel/plugin-proposal-class-properties": "^7.3.4",
+      "@babel/plugin-proposal-decorators": "^7.3.0",
+      "@babel/preset-env": "^7.3.4",
+      "@babel/preset-typescript": "^7.3.3",
+      "@babel/register": "^7.0.0",
+      "@types/chai-http": "^4.2.0",
+      "axios": "^0.18.0",
+      "body-parser": "^1.18.1",
+      "class-validator": "^0.9.1",
+      "ethereumjs-tx": "^1.3.7",
+      "etherscan-api": "^10.0.0",
+      "express": "^4.15.4",
+      "joi": "^14.3.1",
+      "moment": "^2.24.0",
+      "pg": "^7.3.0",
+      "reflect-metadata": "^0.1.10",
+      "ts-node-dev": "^1.0.0-pre.32",
+      "typeorm": "0.2.16",
+      "web3": "0.20.0",
+      "winston": "^2.4.4"
+   },
+   "scripts": {
+      "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+      "build": "npx babel . -d ./dist -s --copy-files  --extensions '.js,.jsx,.ts,.tsx' --verbose --ignore node_modules",
+      "test": "ts-mocha test/**/*.ts --exit",
+      "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
+   }
+}
